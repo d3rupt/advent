@@ -13,7 +13,7 @@ print(adventList)
 result = 0;
 results = []
 while result != 2020:
-    pp = random.sample(adventList, 4)
+    pp = random.sample(adventList, 3)
     if (pp[0] + pp[1] + pp[2] == 2020):
         result = 2020
         results.append(pp[0])
