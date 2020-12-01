@@ -1,3 +1,5 @@
+import random
+
 inputNums = open('inputNums.txt', 'r').readlines()
 adventList = []
 results = []
@@ -8,10 +10,13 @@ for n in inputNums:
     adventList.append(n)
 print(adventList)
 
-for a in adventList:
-    for b in adventList:
-        if a + b == 2020:
-            print('Found one!')
-            results.append([a, b])
-            print(a * b)
+result = 0;
+results = []
+while result != 2020:
+    pp = random.sample(adventList, 4)
+    if (pp[0] + pp[1] + pp[2] == 2020):
+        result = 2020
+        results.append(pp[0])
+        results.append(pp[1])
+        results.append(pp[2])
 print(results)
